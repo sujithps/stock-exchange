@@ -8,7 +8,14 @@ version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '14'
 
 repositories {
-	mavenCentral()
+	// mavenCentral()
+	maven { url 'https://oss.jfrog.org/libs-snapshot' }
+}
+
+dependencies {
+	implementation 'io.reactivex.rxjava3:rxjava:3.0.4'
+	implementation 'com.google.code.gson:gson:2.8.6'
+	compile group: 'com.yahoofinance-api', name: 'YahooFinanceAPI', version: '3.5.0'
 }
 
 application {
